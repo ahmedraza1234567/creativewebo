@@ -17,8 +17,8 @@ os.makedirs("uploads", exist_ok=True)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://creativewebo-sigma.vercel.app",
-        "https://creativewebo-sigma.vercel.app/",
+        "https://creativewebo-two.vercel.app/",
+        "https://creativewebo-two.vercel.app",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
     ],
