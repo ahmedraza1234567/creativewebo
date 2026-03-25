@@ -120,22 +120,6 @@ async def update_user(
         image_data_url = f"data:{image.content_type};base64,{encoded_image}"
         update_data["image"] = image_data_url
 
-    # Agar new image aayi hai to save karo aur purani delete karo
-    # if image and image.filename:
-    #     # Puraani image delete karo
-    #     if "image" in existing_user and os.path.exists(existing_user["image"]):
-    #         os.remove(existing_user["image"])
-            
-    #     # Nayi image unique naam se save karo
-    #     ext = image.filename.split(".")[-1]
-    #     unique_filename = f"{uuid.uuid4().hex}.{ext}"
-    #     file_path = f"uploads/{unique_filename}"
-        
-    #     with open(file_path, "wb") as buffer:
-    #         shutil.copyfileobj(image.file, buffer)
-            
-    #     update_data["image"] = file_path
-
     collection.update_one(
         {"_id": user_id},
         {"$set": update_data}
