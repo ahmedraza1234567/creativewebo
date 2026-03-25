@@ -1,0 +1,10 @@
+# Backend ignores
+backend/__pycache__/
+backend/venv/
+backend/env/
+*.pyc
+
+# Frontend ignores (waise frontend me already hai, par safety ke liye)
+frontend/node_modules/
+frontend/dist/
+.env
