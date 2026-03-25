@@ -75,7 +75,7 @@ function AddPage() {
     data.append("email", form.email)
     data.append("image", form.image)
 
-    axios.post("http://127.0.0.1:8000/add", data) 
+    axios.post("https://creativewebo.onrender.com/add", data) 
       .then((res) => {
       
         window.alert("User saved successfully! ");
