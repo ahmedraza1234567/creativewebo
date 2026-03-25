@@ -8,7 +8,7 @@ function ListPage() {
   const [users, setUsers] = useState([])
 
   const loadUsers = () => {
-    axios.get("http://127.0.0.1:8000/users")
+    axios.get("https://creativewebo.onrender.com/users")
       .then(res => setUsers(res.data))
   }
 
@@ -17,7 +17,7 @@ function ListPage() {
   }, [])
 
   const deleteUser = (id) => {
-    axios.delete(`http://127.0.0.1:8000/delete/${id}`)
+    axios.delete(`https://creativewebo.onrender.com/delete/${id}`)
       .then(() => loadUsers())
   }
 
