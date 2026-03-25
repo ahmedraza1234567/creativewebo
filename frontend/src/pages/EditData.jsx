@@ -19,7 +19,7 @@ function EditPage() {
   const [error, setError] = useState("")
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/user/${id}`)
+    axios.get(`https://creativewebo.onrender.com/user/${id}`)
       .then(res => {
         setForm({
           name: res.data.name,
@@ -77,7 +77,7 @@ function EditPage() {
       data.append("image", form.image)
     }
 
-    axios.put(`http://127.0.0.1:8000/update/${id}`, data)
+    axios.put(`https://creativewebo.onrender.com/update/${id}`, data)
       .then(() => {
         nav("/")
       })
@@ -182,7 +182,7 @@ function EditPage() {
               />
             ) : oldImage ? (
               <img
-                src={oldImage.startsWith("data:") ? oldImage : `http://127.0.0.1:8000/${oldImage}`}
+                src={oldImage.startsWith("data:") ? oldImage : `https://creativewebo.onrender.com/${oldImage}`}
                 className="w-32 h-32 object-cover mx-auto rounded-xl shadow-2xl transform group-hover:scale-105 group-hover:rotate-2 transition-all duration-300 border border-white/20"
                 alt="Current User"
               />
